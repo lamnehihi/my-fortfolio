@@ -20,9 +20,9 @@ class Blogs extends Component {
     this.state = {
       posts: [],
       minValue: 0,
-      maxValue: 6
+      maxValue: 6,
     };
-    this.perPage = 6
+    this.perPage = 6;
   }
 
   callAPI() {
@@ -57,10 +57,10 @@ class Blogs extends Component {
     return (total) => `Total ${this.state.posts.length} items`;
   }
 
-  handleChange = value => {
+  handleChange = (value) => {
     this.setState({
       minValue: (value - 1) * this.perPage,
-      maxValue: value * this.perPage
+      maxValue: value * this.perPage,
     });
   };
 
@@ -77,33 +77,37 @@ class Blogs extends Component {
         </div>
 
         <div className="Blogs">
-          {posts.slice(this.state.minValue, this.state.maxValue).map((item, index) => (
-            <Col span={6} offset={2} key={index}>
-              <Card
-                style={{ width: 300 }}
-                cover={<img alt="example" src={item.cover} />}
-                actions={[
-                  <SettingOutlined key="setting" />,
-                  <EditOutlined key="edit" />,
-                  <EllipsisOutlined key="ellipsis" />,
-                ]}
-              >
-                <Meta
-                  avatar={
-                    <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                  }
-                  title="Card title"
-                  description="This is the description"
-                />
-              </Card>
-            </Col>
-          ))}
+          {posts
+            .slice(this.state.minValue, this.state.maxValue)
+            .map((item, index) => (
+              <Col span={6} offset={2} key={index}>
+                <Card
+                  style={{ width: 300 }}
+                  cover={<img alt="example" src={item.cover} />}
+                  actions={[
+                    <SettingOutlined key="setting" />,
+                    <EditOutlined key="edit" />,
+                    <EllipsisOutlined key="ellipsis" />,
+                  ]}
+                >
+                  <Meta
+                    avatar={
+                      <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                    }
+                    title="Card title"
+                    description="This is the description"
+                  />
+                </Card>
+              </Col>
+            ))}
         </div>
         <Pagination
+          current={1}
           defaultCurrent={1}
           defaultPageSize={this.perPage} //default size of page
           onChange={this.handleChange}
           total={posts.length} //total number of card data available
+          className="pagination"
         />
       </div>
     );

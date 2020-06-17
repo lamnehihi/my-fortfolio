@@ -1,0 +1,99 @@
+.About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-info {
+  color: #666;
+  background-color: #fff;
+  margin-bottom: 3rem;
+}
+
+.personal-info .title {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personal-info .title div {
+  margin-right: 3rem;
+}
+
+.personal-info .title span {
+  font-weight: 600;
+}
+
+.personal-info h2 {
+  padding-bottom: 22px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #666;
+  background-color: #fff;
+}
+
+.personal-info .panel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.personal-info .panel .box {
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  padding: .5rem 3.5rem;
+  text-transform: uppercase !important;
+  width: 255px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.personal-info .panel .box h3 {
+  margin: 0rem;
+  font-size: 50px;
+  font-weight: 700;
+  color: #72b626;
+  position: relative;
+  width: fit-content;
+}
+
+.personal-info .panel .box h3::after {
+  content: "+";
+  position: absolute;
+  right: -24px;
+  font-size: 33px;
+  font-weight: 300;
+  top: 2px;
+}
+
+.personal-info .panel .box p {
+  position: relative;
+  padding-left: 45px;
+}
+
+.personal-info .panel .box p::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 30px;
+  height: 1px;
+  background: #777;
+}
+
+.btn-contact {
+  background-color: #72b626 !important;
+  color: white !important;
+}
+
+.btn-contact:hover, .btn-contact:active {
+  color: white !important;
+  border: 1px solid white;
+}
+
+.divider {
+  width: 600px;
+  min-height: 1px;
+  background-color: #ddd;
+  margin-bottom: 3rem;
+}
+
