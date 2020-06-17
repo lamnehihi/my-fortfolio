@@ -80,9 +80,9 @@ class Blogs extends Component {
           {posts
             .slice(this.state.minValue, this.state.maxValue)
             .map((item, index) => (
-              <Col span={6} offset={2} key={index}>
+              <Col lg={{ span: 6, offset: 2 }} xs={{ span: 24 }} key={index}>
                 <Card
-                  style={{ width: 300 }}
+
                   cover={<img alt="example" src={item.cover} />}
                   actions={[
                     <SettingOutlined key="setting" />,

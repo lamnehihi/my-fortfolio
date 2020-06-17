@@ -58,7 +58,7 @@ class Index extends Component {
         </div>
         <div className="Index">
           {posts.slice(5).map((item, index) => (
-            <Col span={6} offset={2}>
+            <Col lg={{ span: 6, offset: 2 }} xs={{ span: 24 }}>
               <div className="cover">
                 <img alt="example" src={item.cover} />
               </div>

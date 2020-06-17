@@ -1,7 +1,14 @@
 .SideBar {
   background-color: rgba(127, 255, 212, 0);
-  position: fixed;
-  top: 40%;
+  position: relative;
+  top: 10%;
+  right: -2%;
+}
+
+.ant-layout-sider-zero-width-trigger {
+  position: absolute !important;
+  top: 3% !important;
+  right: 0% !important;
 }
 
 .SideBar ul {

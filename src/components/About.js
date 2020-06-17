@@ -22,7 +22,7 @@ class About extends Component {
 
         <div className="personal-info">
           <Row>
-            <Col span={11} offset={2}>
+            <Col lg={{ span: 11, offset: 2 }} xs={{ span: 24 }}>
               <h2>PERSONAL INFOS</h2>
               <div className="title">
                 <div>
@@ -71,7 +71,7 @@ class About extends Component {
                 </Button>
               </div>
             </Col>
-            <Col span={11}>
+            <Col lg={{ span: 11 }} xs={{ span: 24 }}>
               <div className="panel">
                 <div className="box">
                   <h3>2</h3>

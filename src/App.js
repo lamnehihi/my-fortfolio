@@ -20,7 +20,7 @@ class App extends Component {
         <div className="App">
           <Layout>
             <Layout>
-              <Content className="body" style={{ height: '100%' }}>
+              <Content className="body" style={{ height: "100%" }}>
                 <Switch>
                   <Route path="/about">
                     <About />
@@ -33,7 +33,17 @@ class App extends Component {
                   </Route>
                 </Switch>
               </Content>
-              <Sider theme="light" width="100px">
+              <Sider
+                theme="light"
+                breakpoint="lg"
+                collapsedWidth="0"
+                onBreakpoint={(broken) => {
+                  console.log(broken);
+                }}
+                onCollapse={(collapsed, type) => {
+                  console.log(collapsed, type);
+                }}
+              >
                 {" "}
                 <SideBar />{" "}
               </Sider>
