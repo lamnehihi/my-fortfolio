@@ -1,7 +1,7 @@
 .SideBar {
   background-color: rgba(127, 255, 212, 0);
   position: relative;
-  top: 10%;
+  top: 40%;
   right: -2%;
 }
 
@@ -37,4 +37,13 @@
 
 .SideBar img {
   width: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+  .SideBar {
+    background-color: rgba(127, 255, 212, 0);
+    position: relative;
+    top: 10%;
+    right: -2%;
+  }
 }
