@@ -39,7 +39,7 @@
 
 .personal-info .panel .box {
   margin-bottom: 2rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   padding: .5rem 3.5rem;
   text-transform: uppercase !important;
   width: 255px;
@@ -103,5 +103,17 @@
     background-color: #fff;
     margin-bottom: 3rem;
     margin-left: 3rem;
+  }
+  .personal-info .panel .box {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    padding: .5rem 3.5rem;
+    text-transform: uppercase !important;
+    width: 255px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .personal-info .title button{
+    margin: 2rem 0rem;
   }
 }
