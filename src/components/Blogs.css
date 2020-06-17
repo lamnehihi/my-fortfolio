@@ -1,0 +1,4 @@
+.Blogs {
+  display: flex;
+  flex-wrap : wrap;
+}
