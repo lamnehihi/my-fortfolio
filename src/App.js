@@ -1,43 +1,44 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/Index.js"
-import Blogs from "./components/Blogs.js"
-import About from "./components/About.js"
-import Header from "./components/Header.js"
+
+import Home from "./components/Index.js";
+import Blogs from "./components/Blogs.js";
+import About from "./components/About.js";
+import SideBar from "./components/SideBar";
+
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
+
+import { Layout } from "antd";
 
 class App extends Component {
   render() {
+    const { Footer, Sider, Content } = Layout;
+
     return (
       <Router>
         <div className="App">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>              
-              <li>
-                <Link to="/blog">Blogs</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-            </ul>
-          </nav>
-          
-          <Header />
-
-          <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/blog">
-              <Blogs />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <Layout>
+            <Layout>
+              <Content className="body" style={{ height: '100%' }}>
+                <Switch>
+                  <Route path="/about">
+                    <About />
+                  </Route>
+                  <Route path="/blog">
+                    <Blogs />
+                  </Route>
+                  <Route path="/">
+                    <Home />
+                  </Route>
+                </Switch>
+              </Content>
+              <Sider theme="light" width="100px">
+                {" "}
+                <SideBar />{" "}
+              </Sider>
+            </Layout>
+          </Layout>
         </div>
       </Router>
     );

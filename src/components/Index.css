@@ -1,0 +1,11 @@
+.Index {
+  display: flex;
+  flex-direction: row;
+  flex-wrap : wrap;
+  justify-content: center;
+}
+
+.Index img {
+  width: 300px;
+  margin: 1rem 0rem;
+}

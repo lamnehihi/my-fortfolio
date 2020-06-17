@@ -1,0 +1,33 @@
+.SideBar {
+  background-color: rgba(127, 255, 212, 0);
+  position: fixed;
+  top: 40%;
+}
+
+.SideBar ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.SideBar ul li {
+  margin-top: 3rem;
+}
+
+.SideBar a {
+  padding: 1.2rem;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.SideBar a:hover, a:active, a:focus {
+  padding: 1.2rem;
+  background-color: #73B626;
+  border-radius: 50%;
+}
+
+.SideBar img {
+  width: 20px;
+}
