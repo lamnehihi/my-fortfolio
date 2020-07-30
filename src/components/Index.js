@@ -21,7 +21,7 @@ class Index extends Component {
   }
 
   callAPI() {
-    fetch("http://localhost:9000/api/posts")
+    fetch("https://api-portfolio.glitch.me/api/posts")
       .then((res) => res.json())
       .then(
         (result) => {
